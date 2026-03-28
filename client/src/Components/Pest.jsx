@@ -19,9 +19,10 @@ const Pest = () => {
       style={styles.container}
     >
       <div style={styles.card}>
-        <h2 style={styles.title}>🌿 AI Pest Detection</h2>
+        <h2 style={styles.title}>🌿 AI कीट पहचान (Pest Detection)</h2>
         <p style={styles.text}>
-          Click the button below to load the CNN Plant Disease Detector.
+          CNN प्लांट डिजीज डिटेक्टर लोड करने के लिए नीचे दिए गए बटन पर क्लिक
+          करें।
         </p>
 
         <button
@@ -31,7 +32,7 @@ const Pest = () => {
             backgroundColor: showStreamlit ? "#dc2626" : "#166534",
           }}
         >
-          {showStreamlit ? "Hide Detector Widget" : "Get Streamlit Widget"}
+          {showStreamlit ? "डिटेक्टर छुपाएं" : "डिटेक्टर विजेट खोलें"}
         </button>
       </div>
 
@@ -40,12 +41,11 @@ const Pest = () => {
         <div style={styles.iframeContainer}>
           <iframe
             src={STREAMLIT_URL}
-            title="Pest Detection Widget"
+            title="कीट पहचान विजेट"
             width="100%"
             height="850px"
             style={styles.iframe}
             allow="camera" // Mobile users ke liye camera access zaroori hai
-            // Sandbox redirects aur loops ko handle karne mein madad karta hai
             sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
           />
         </div>
